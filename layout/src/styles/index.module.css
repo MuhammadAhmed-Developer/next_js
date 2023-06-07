@@ -1,0 +1,7 @@
+.layout{
+    background-color: tomato;
+    color: #ffff;
+}
+.main{
+    flex: 1 0 auto;
+}

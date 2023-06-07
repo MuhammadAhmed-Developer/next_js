@@ -1,0 +1,10 @@
+body{
+    background-color: rgb(218, 228, 243);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+main{
+    flex: 1 0 auto;
+}
