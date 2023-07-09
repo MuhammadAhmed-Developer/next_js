@@ -10,6 +10,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
 }
 
 .footer {
@@ -31,6 +33,7 @@
 .title a {
   color: #0070f3;
   text-decoration: none;
+  
 }
 
 .title a:hover,
@@ -126,4 +129,14 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+.nav ul{
+   display: flex;
+   justify-content: center;
+}
+.nav ul li{
+   margin: 0 30px;
+   font-weight: bold;
+   list-style: none;
 }
