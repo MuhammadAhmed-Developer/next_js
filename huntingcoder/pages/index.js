@@ -3,16 +3,12 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Script from 'next/script'
 import Link from 'next/link'
-import Dummy from '../components/dummy'
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <style jsx>
         {`
-        .myspan{
-          color: red
-        }
           
         `}
       </style>
@@ -22,8 +18,6 @@ export default function Home() {
         <meta name="keywords" content="blogs, hunting coder blogs, nextjs, coding" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Script src="/src.js" strategy='lazyOnload'></Script> */}
-          <Dummy/>
       <nav className={styles.nav}>
         <ul>
          <Link href={'/'}> <li>Home</li></Link>
@@ -39,6 +33,8 @@ export default function Home() {
           Hunting Coder
           </span>
         </h1>
+         
+         <Image className={styles.myimg} src="/blog1.jpg" width={237} height={158} />
 
         <p className={styles.description}>
           A blogs for hunting coders for hunting coder
