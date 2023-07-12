@@ -2,14 +2,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Script from 'next/script'
-import Link from 'next/link'
+
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <style jsx>
         {`
-          
+          h2{
+          font-size: 35px
+          }
         `}
       </style>
       <Head>
@@ -18,14 +20,6 @@ export default function Home() {
         <meta name="keywords" content="blogs, hunting coder blogs, nextjs, coding" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <nav className={styles.nav}>
-        <ul>
-         <Link href={'/'}> <li>Home</li></Link>
-         <Link href={'/about'}><li>About</li></Link>
-           <Link href={'/contact'}><li>Contact</li></Link>
-          <Link href={'/blog'}> <li>Blog</li></Link>
-        </ul>
-      </nav>
 
       <main className={styles.main}>
         <h1 className={[styles.title]}>
@@ -41,7 +35,7 @@ export default function Home() {
         </p>
 
         <div className="blogs">
-          
+          <h2>Popular Blogs</h2>
           <div className="blogitem">
             <h3>Learn JS in 2023?</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
