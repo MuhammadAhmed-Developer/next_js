@@ -19,14 +19,14 @@ export default function blog() {
   return (
     <div className={styles.main}>
         <h2>Popular Blogs</h2>
-        {blogs.map((blogitem)=>{
-          return  <div className={styles.blogs}>
+        {blogs.map((blogitem,i)=>{
+          return  <div key={i} className={styles.blogs}>
         
           <div className="blogitem">
-            <Link href={'/blogpost/learn-javascript-mind'}>
+            <Link href={`/blogpost/${blogitem.slug}`}>
               <h3>Auther : {blogitem.author}</h3>
               <h3>{blogitem.title}</h3></Link>
-            <p>{blogitem.content}</p>
+            <p>{blogitem.content.substr(0, 200)}...</p>
           </div>
         </div>
         })}
