@@ -28,7 +28,7 @@ export default function Home() {
           </span>
         </h1>
          
-         <Image className={styles.myimg} src="/blog1.jpg" width={237} height={158} />
+         <img className={styles.myimg} src="/blog1.jpg" width={237} height={158} />
 
         <p className={styles.description}>
           A blogs for hunting coders for hunting coder

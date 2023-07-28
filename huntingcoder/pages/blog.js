@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import styles from '../styles/Blog.module.css'
 import Link from 'next/link';
-// import * as fs from 'fs';
+import * as fs from 'fs';
 
 export default function blog(props) {
   // console.log(props);
@@ -18,7 +18,7 @@ export default function blog(props) {
   return (
     <div className={styles.main}>
         <h2>Popular Blogs</h2>
-        {blogs.map((blogitem)=>{
+        {blogs?.map((blogitem)=>{
           return  <div key={blogitem.slug} className={styles.blogs}>
         
           <div className="blogitem">
@@ -36,7 +36,7 @@ export default function blog(props) {
 
 
 
-export async function getStaticSideProps(context){
+export async function getStaticProps(context){
   let data = await  fs.promises.readdir('blogsData')
   let myfile;
  let allBlogs =[]

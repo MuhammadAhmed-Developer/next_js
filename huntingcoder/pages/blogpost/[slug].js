@@ -47,7 +47,7 @@ export const getStaticPaths = async () => {
 } 
 
 
-export async function getStaticSideProps(context) {
+export async function getStaticProps(context) {
   console.log(context)
   // // const router = useRouter()
   const { slug } = (context.params)
@@ -56,7 +56,7 @@ export async function getStaticSideProps(context) {
  let myBlog = await fs.promises.readFile(`blogsData/${slug}.json`, 'utf-8')
 
   return {
-    props: { myBlog }
+    props: { myBlog: JSON.parse(myBlog) }
   }
 
 }
