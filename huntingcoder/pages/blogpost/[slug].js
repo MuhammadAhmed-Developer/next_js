@@ -48,7 +48,7 @@ export const getStaticPaths = async () => {
 
 
 export async function getStaticProps(context) {
-  console.log(context)
+  // console.log(context)
   // // const router = useRouter()
   const { slug } = (context.params)
 

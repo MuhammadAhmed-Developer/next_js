@@ -3,7 +3,7 @@ import styles from '../styles/Blog.module.css'
 import Link from 'next/link';
 import * as fs from 'fs';
 
-export default function blog(props) {
+export default function Blog(props) {
   // console.log(props);
   const [blogs, setblogs] = useState(props.allBlogs)
 
