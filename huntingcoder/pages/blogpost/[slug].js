@@ -5,6 +5,10 @@ import * as fs from 'fs';
 
 export default function Slug(props) {
 
+  function createMarkup(c) {
+    return {__html: c};
+  }
+
   const [blog, setblog] = useState(props.myBlog)
 
   // const router = useRouter()
@@ -27,11 +31,9 @@ export default function Slug(props) {
       <div className={styles.main}>
         <h1>{blog && blog.title}</h1>
         <hr />
-        <div className='blog-content'>
-          {blog && blog.content}
-        </div>
-      </div>
-    </div>
+{blog && <div className='blog-content' dangerouslySetInnerHTML={createMarkup(blog.content)}></div>}
+</div>
+</div>
   )
 }
 

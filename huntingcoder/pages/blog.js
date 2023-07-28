@@ -25,7 +25,7 @@ export default function Blog(props) {
             <Link href={`/blogpost/${blogitem.slug}`}>
               <h3>Auther : {blogitem.author}</h3>
               <h3>{blogitem.title}</h3></Link>
-            <p>{blogitem.content.substr(0, 200)}...</p>
+            <p>{blogitem.metadesc.substr(0, 200)}...</p>
           </div>
         </div>
         })}
