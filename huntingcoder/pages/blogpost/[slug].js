@@ -34,7 +34,19 @@ export default function slug(props) {
   )
 }
 
-export async function getServerSideProps(context) {
+export const getStaticPaths = async () => {
+  return {
+    paths: [
+      {params : {slug: 'learn-flask'}},
+      {params : {slug: 'learn-js'}},
+      {params : {slug: 'learn-nextjs'}},
+    ],
+    fallback: true, // false or "blocking"
+  };
+} 
+
+
+export async function getStaticSideProps(context) {
   // console.log(context.query)
   // // const router = useRouter()
   const { slug } = (context.query)
@@ -45,3 +57,17 @@ export async function getServerSideProps(context) {
   }
 
 }
+
+
+
+// export async function getServerSideProps(context) {
+//   // console.log(context.query)
+//   // // const router = useRouter()
+//   const { slug } = (context.query)
+//   let data = await fetch(`http://localhost:3000/api/getblog?slug=${slug}`)
+//   let myBlog = await data.json()
+//   return {
+//     props: { myBlog }
+//   }
+
+// }

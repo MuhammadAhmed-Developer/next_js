@@ -31,7 +31,10 @@ export default function blog(props) {
   )
 }
 
-export async function getServerSideProps(context){
+
+
+
+export async function getStaticSideProps(context){
  let data = await fetch('http://localhost:3000/api/blogs')
  let allBlogs = await data.json()
  
@@ -40,3 +43,12 @@ export async function getServerSideProps(context){
  }
 
 }
+// export async function getServerSideProps(context){
+//  let data = await fetch('http://localhost:3000/api/blogs')
+//  let allBlogs = await data.json()
+ 
+//  return{
+//   props:{allBlogs},
+//  }
+
+// }
