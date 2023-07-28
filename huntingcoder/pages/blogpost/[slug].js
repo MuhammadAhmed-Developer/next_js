@@ -26,7 +26,7 @@ export default function slug() {
     <div className={styles.main}>
         <h1>{blog && blog.title}</h1>
         <hr />
-        <div>
+        <div className='blog-content'>
          {blog && blog.content}
         </div>
     </div>
