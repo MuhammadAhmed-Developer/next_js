@@ -2,17 +2,17 @@ import React, { useEffect, useState } from 'react'
 import styles from '../styles/Blog.module.css'
 import Link from 'next/link'
 export default function blog(props) {
-  // console.log(props);
-  const [blogs, setblogs] = useState([])
+  console.log(props);
+  const [blogs, setblogs] = useState(props.allBlogs)
 
-  useEffect(() => {
-    fetch('http://localhost:3000/api/blogs').then((a) => {
-      return a.json();
-    })
-    .then((parsed) => {
-      setblogs(parsed)
-    })
-  }, [])
+  // useEffect(() => {
+  //   fetch('http://localhost:3000/api/blogs').then((a) => {
+  //     return a.json();
+  //   })
+  //   .then((parsed) => {
+  //     setblogs(parsed)
+  //   })
+  // }, [])
   return (
     <div className={styles.main}>
         <h2>Popular Blogs</h2>
@@ -32,14 +32,11 @@ export default function blog(props) {
 }
 
 export async function getServerSideProps(context){
-  fetch('http://localhost:3000/api/blogs').then((a) => {
-      return a.json();
-    })
-    .then((parsed) => {
-      setblogs(parsed)
-    })
+ let data = await fetch('http://localhost:3000/api/blogs')
+ let allBlogs = await data.json()
+ 
  return{
-  props:{ahmed: 'Good Boy'},
+  props:{allBlogs},
  }
 
 }
