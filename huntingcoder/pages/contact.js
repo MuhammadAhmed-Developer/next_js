@@ -9,9 +9,9 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(name, phone, email, desc)
+    // console.log(name, phone, email, desc)
 
-    const data = {username: 'example'}
+    const data = {name, email, phone, desc}
 
     fetch('http://localhost:3000/api/postcontact/', {
       method: 'post',
@@ -20,9 +20,15 @@ export default function Contact() {
       },
       body: JSON.stringify(data)
     })
-     .then(response => response.json())
+     .then(response => response.text())
      .then(data => {
       console.log('Success', data)
+      alert('Thanks for contacting us')
+      setdesc('')
+      setname('')
+      setemail('')
+      setphone('')
+       
      })
      .catch((err)=>{
       console.log(err);
