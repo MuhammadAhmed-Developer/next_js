@@ -1,4 +1,6 @@
-import * as fs from 'fs';
+import * as fs from 'node:fs';
+
+
 export default async function handler(req, res) {
     
   let data = await  fs.promises.readdir('blogsData')

@@ -1,4 +1,4 @@
-import * as fs from 'node:fs';
+import * as fs from 'fs';
 // asy dalna slug
 // http://localhost:3000/api/getblog?slug=learn-js
 export default function handler(req, res) {
