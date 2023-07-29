@@ -1,7 +1,36 @@
 .container{
     max-width: 60vh;
     margin: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding:10px 20px ;
+    margin-top: 50px;
+    align-items: center;
+
+ 
 }
 .mb{
 margin: 15px ;
+display: flex;
+flex-direction: column;
+}
+.btn{
+    padding: 13px 20px;
+    background-color: lightblue;
+    color: black;
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+
+
+}
+
+.input{
+    padding: 7px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.btnwraper{
+    text-align: end;
+    margin-right: 15px;
 }

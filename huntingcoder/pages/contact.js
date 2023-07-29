@@ -64,23 +64,26 @@ export default function Contact() {
       <form onSubmit={handleSubmit}>
         <div className={styles.mb}>
           <label htmlFor="name" className="form-label">Enter Your Name </label>
-          <input type="text" onChange={handleChange} value={name} className="form-control" id="name" name='name' />
+          <input type="text" onChange={handleChange} value={name} className={styles.input} id="name" name='name'  required/>
 
         </div>
         <div className={styles.mb}>
           <label htmlFor="email" className="form-label"> Enter Email </label>
-          <input type="email"  value={email} onChange={handleChange} className="form-control" id="email" name='email' />
+          <input type="email"  value={email} onChange={handleChange} className={styles.input} id="email" name='email' required />
         </div>
         
         <div className={styles.mb}>
           <label htmlFor="phone" className="form-label"> Enter Phone </label>
-          <input type="phone" value={phone} onChange={handleChange} className="form-control" id="phone" name='phone' />
+          <input type="phone" value={phone} onChange={handleChange} className={styles.input} id="phone" name='phone' required/>
         </div>
-        <label htmlFor="desc" >Comments</label>
         <div className={styles.mb} >
-          <textarea className="form-control" placeholder="Write Your Concern here" id="desc" name='desc'  onChange={handleChange} value={desc} />
+        <label htmlFor="desc" >Comments</label>
+          <textarea className={styles.input} placeholder="Write Your Concern here" id="desc" name='desc'  onChange={handleChange} value={desc} />
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <div className={styles.btnwraper}>
+
+        <button type="submit" className={styles.btn}>Send</button>
+        </div>
       </form>
     </div>
   )

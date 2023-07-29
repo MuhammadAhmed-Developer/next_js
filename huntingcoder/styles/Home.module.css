@@ -45,7 +45,7 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
 .title,
@@ -54,8 +54,8 @@
 }
 
 .description {
-  line-height: 1.5;
-  font-size: 1.5rem;
+  line-height: 1;
+  font-size: 1.2rem;
 }
 
 .code {
@@ -144,4 +144,14 @@
   border-radius: 12px;
   margin: 20px;
 
+}
+.btn{
+  color: wheat;
+  background: #294848;
+  padding: 7px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.topic{
+  margin-bottom: -1px !important;
 }

@@ -18,14 +18,15 @@ export default function Blog(props) {
   return (
     <div className={styles.main}>
         <h2>Popular Blogs</h2>
-        {blogs?.map((blogitem)=>{
-          return  <div key={blogitem.slug} className={styles.blogs}>
-        
-          <div className="blogitem">
+        {blogs?.map((blogitem, i)=>{
+          return  <div key={i} className={styles.blogs}>
+          <div >
             <Link href={`/blogpost/${blogitem.slug}`}>
-              <h3>Auther : {blogitem.author}</h3>
-              <h3>{blogitem.title}</h3></Link>
+              {/* <h3>Auther : {blogitem.author}</h3> */}
+              <h3> {i + 1}) {blogitem.title}</h3></Link>
             <p>{blogitem.metadesc.substr(0, 200)}...</p>
+            
+            <Link href={`/blogpost/${blogitem.slug}`}><button className={styles.btn}>Read More...</button></Link>
           </div>
         </div>
         })}

@@ -1,13 +1,19 @@
-
 .main {
-  margin:0rem 10rem;
-    min-height: 100vh;
-    padding: 4rem 0;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 2rem;
-  }
+  margin: 0rem 10rem;
+  /* min-height: 100vh; */
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.btn {
+  color: wheat;
+  background: #294848;
+  padding: 7px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
