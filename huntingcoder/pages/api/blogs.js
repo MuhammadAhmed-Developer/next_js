@@ -1,15 +1,17 @@
+import { log } from 'node:console';
 import * as fs from 'node:fs';
 
 
 export default async function handler(req, res) {
-    
+  console.log(req.query.count); // used for infinite scroll bar this line 
   let data = await  fs.promises.readdir('blogsData')
+  data = data.slice(0, parseInt(req.query.count)) // used for infinite scroll bar this line
   let myfile;
  let allblogs =[]
 
     for (let index = 0; index < data.length; index++) {
       const item = data[index];
-      console.log(item)
+      // console.log(item)
       myfile =  await fs.promises.readFile(('blogsData/' +  item), "utf-8" )
       // console.log(myfile)  
       // Parse object ma convert karta hhy 
