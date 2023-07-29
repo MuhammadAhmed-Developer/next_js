@@ -13,7 +13,8 @@ export default function Contact() {
 
     const data = {name, email, phone, desc}
 
-    fetch('http://localhost:3000/api/postcontact/', {
+    try{
+      fetch('http://localhost:3000/api/postcontact/', {
       method: 'post',
       headers:{
         'Content-Type': 'application/json'
@@ -22,7 +23,7 @@ export default function Contact() {
     })
      .then(response => response.text())
      .then(data => {
-      console.log('Success', data)
+      console.log('Success')
       alert('Thanks for contacting us')
       setdesc('')
       setname('')
@@ -30,9 +31,15 @@ export default function Contact() {
       setphone('')
        
      })
-     .catch((err)=>{
-      console.log(err);
-     })
+      
+    } catch (error) {
+      console.log(error)
+    }
+
+    
+    //  .catch((err)=>{
+    //   console.log(err);
+    //  })
   }
   const handleChange = (e) => {
     if(e.target.name == 'name'){

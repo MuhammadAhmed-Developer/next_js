@@ -6,7 +6,7 @@ import * as fs from 'fs';
 export default function Slug(props) {
 
   function createMarkup(c) {
-    return {__html: c};
+    return { __html: c };
   }
 
   const [blog, setblog] = useState(props.myBlog)
@@ -31,22 +31,22 @@ export default function Slug(props) {
       <div className={styles.main}>
         <h1>{blog && blog.title}</h1>
         <hr />
-{blog && <div className='blog-content' dangerouslySetInnerHTML={createMarkup(blog.content)}></div>}
-</div>
-</div>
+        {blog && <div className='blog-content' dangerouslySetInnerHTML={createMarkup(blog.content)}></div>}
+      </div>
+    </div>
   )
 }
 
 export const getStaticPaths = async () => {
   return {
     paths: [
-      {params : {slug: 'learn-flask'}},
-      {params : {slug: 'learn-js'}},
-      {params : {slug: 'learn-nextjs'}},
+      { params: { slug: 'learn-flask' } },
+      { params: { slug: 'learn-js' } },
+      { params: { slug: 'learn-nextjs' } },
     ],
     fallback: true, // false or "blocking"
   };
-} 
+}
 
 
 export async function getStaticProps(context) {
@@ -55,7 +55,7 @@ export async function getStaticProps(context) {
   const { slug } = (context.params)
 
 
- let myBlog = await fs.promises.readFile(`blogsData/${slug}.json`, 'utf-8')
+  let myBlog = await fs.promises.readFile(`blogsData/${slug}.json`, 'utf-8')
 
   return {
     props: { myBlog: JSON.parse(myBlog) }

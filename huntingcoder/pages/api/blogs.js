@@ -12,6 +12,7 @@ export default async function handler(req, res) {
       console.log(item)
       myfile =  await fs.promises.readFile(('blogsData/' +  item), "utf-8" )
       // console.log(myfile)  
+      // Parse object ma convert karta hhy 
        allblogs.push(JSON.parse(myfile))
 
   }
