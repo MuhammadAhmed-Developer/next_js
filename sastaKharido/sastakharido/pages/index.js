@@ -2,17 +2,17 @@ import Head from 'next/head'
 
 export default function Home() {
   return (
-        <div>
+        <>
       <Head>
-        <title>Create Next App</title>
+        <title>Sasta Kharido</title>
         <meta name="description" content="SastaKharido.com" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      heloow
-      <div className='mx-4 my-6  bg-red-600'>Hi this is tailwindcss</div>
+      <h1 className='bg-red-100 font-serif text-lime-200 font-bold text-white'>Hellow World</h1>
+      <div>Hi this is tailwindcss</div>
         
   
-    </div>
+    </>
   )
 }
