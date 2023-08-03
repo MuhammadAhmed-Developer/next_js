@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       heloow
-      <div className='mx-4 my-6 bg-red-600'>Hi this is tailwindcss</div>
+      <div className='mx-4 my-6  bg-red-600'>Hi this is tailwindcss</div>
         
   
     </div>
