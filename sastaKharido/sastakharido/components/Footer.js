@@ -9,27 +9,27 @@ export default function Footer() {
                 <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
                     <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
                         <Link href={"/"} className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-                           <Image src="/logo.png" alt='Logo' width={300} height={10}/>
+                            <Image src="/logo.png" alt='Logo' width={300} height={10} />
                         </Link>
-                        <p className="mt-2 text-sm text-gray-500 px-6">Air plant banjo lyft occupy retro adaptogen indego</p>
+                        <span className="mt-2 text-sm text-gray-500 px-6">Air plant banjo lyft occupy retro adaptogen indego</span>
                     </div>
                     <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
                         <div className="lg:w-1/4 md:w-1/2 w-full px-4">
                             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
                             <nav className="list-none mb-10">
                                 <ul>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">First Link</p>
-                                </li>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">Second Link</p>
-                                </li>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">Third Link</p>
-                                </li>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">Fourth Link</p>
-                                </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">First Link</span>
+                                    </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">Second Link</span>
+                                    </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">Third Link</span>
+                                    </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">Fourth Link</span>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
@@ -37,18 +37,18 @@ export default function Footer() {
                             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
                             <nav className="list-none mb-10">
                                 <ul>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">First Link</p>
-                                </li>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">Second Link</p>
-                                </li>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">Third Link</p>
-                                </li>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">Fourth Link</p>
-                                </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">First Link</span>
+                                    </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">Second Link</span>
+                                    </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">Third Link</span>
+                                    </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">Fourth Link</span>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
@@ -56,18 +56,18 @@ export default function Footer() {
                             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
                             <nav className="list-none mb-10">
                                 <ul>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">First Link</p>
-                                </li>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">Second Link</p>
-                                </li>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">Third Link</p>
-                                </li>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">Fourth Link</p>
-                                </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">First Link</span>
+                                    </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">Second Link</span>
+                                    </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">Third Link</span>
+                                    </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">Fourth Link</span>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
@@ -75,18 +75,18 @@ export default function Footer() {
                             <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
                             <nav className="list-none mb-10">
                                 <ul>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">First Link</p>
-                                </li>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">Second Link</p>
-                                </li>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">Third Link</p>
-                                </li>
-                                <li>
-                                    <p className="text-gray-600 hover:text-gray-800">Fourth Link</p>
-                                </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">First Link</span>
+                                    </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">Second Link</span>
+                                    </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">Third Link</span>
+                                    </li>
+                                    <li>
+                                        <span className="text-gray-600 hover:text-gray-800">Fourth Link</span>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>
@@ -94,9 +94,9 @@ export default function Footer() {
                 </div>
                 <div className="bg-gray-100">
                     <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                        <p className="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
-                            <p href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@knyttneve</p>
-                        </p>
+                        <span className="text-gray-500 text-sm text-center sm:text-left">© 2020 Tailblocks —
+                            <span href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank">@knyttneve</span>
+                        </span>
                         <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
                             <p className="text-gray-500">
                                 <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">

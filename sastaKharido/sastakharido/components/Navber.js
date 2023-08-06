@@ -1,12 +1,12 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { AiFillCloseCircle, AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiFillCloseCircle, AiFillMinusSquare, AiFillPlusSquare, AiOutlineShoppingCart } from 'react-icons/ai';
 
 export default function Navber() {
   // const ref = useRef()
   const ref = useRef(null);
-  
+
 const toggleCart = () => {
   if (ref.current.classList.contains('translate-x-full')) {
     ref.current.classList.remove('translate-x-full');
@@ -37,12 +37,20 @@ const toggleCart = () => {
         <AiOutlineShoppingCart  className='text-xl md:text-3xl cursor-pointer text-green-500'/> 
        </div>
 
-      <div ref={ref} className="sideCart absolute right-0 top-0 bg-green-100 p-10 transform transition-transform translate-x-full">
-           <h2 className='font-bold text-xl'>Shopping Cart</h2>
+       {/* Toggle Cart============================= */}
+
+      <div ref={ref} className="sidebar h-full  w-72 sideCart absolute right-0 top-0 bg-green-100 p-10 transform transition-transform translate-x-full">
+           <h2 className='font-bold text-xl text-center'>Shopping Cart</h2>
            <span onClick={toggleCart} className='absolute top-3 right-4 text-2xl cursor-pointer text-green-500'><AiFillCloseCircle/></span>
-           <ol>
-            <li><span>T-Shirt </span></li>
-           </ol>
+           <ol className='list-decimal'>
+            <li>
+              <div className="item flex my-5">
+              <div className='w-3/4 '> T-Shirt Lorem ipsum </div>
+          
+                <div className=' flex items-center justify-center'><AiFillPlusSquare className='cursor-pointer mx-2 text-2xl  text-green-400'/><span className='text-2xl mb-1'>3</span>  <AiFillMinusSquare className='cursor-pointer mx-2 text-2xl text-red-400'/></div>
+              </div>
+            </li>
+          </ol>
       </div>
 
     </div>
