@@ -1,8 +1,16 @@
 import { useRouter } from 'next/router'
+import { useState } from 'react'
  
 export default function Post() {
-  const router = useRouter()
-  const {slug} = router.query
+  // const router = useRouter()
+  // const {slug} = router.query
+  
+  const [pin, setpin] = useState()
+ const checkServiceAbility = () =>{
+    let pins = fetch('http://localhost:3000/api/pincode')
+ }
+
+
   return <>
             <section className="text-gray-600 body-font overflow-hidden">
   <div className="container px-5 py-16 mx-auto">
@@ -81,6 +89,10 @@ export default function Post() {
               <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
             </svg>
           </button>
+        </div>
+        <div className="pin mt-6 flex space-x-2 text-sm">
+          <input type="text" className='px-2 border-2 border-green-200 rounded-md' />
+          <button onClick={checkServiceAbility} className='flex ml-12 text-white bg-green-500 border-0 py-1 px-4 focus:outline-none hover:bg-green-600 rounded text-sm'>Check</button>
         </div>
       </div>
     </div>
