@@ -2,6 +2,7 @@ import React, { useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { AiFillCloseCircle, AiFillMinusSquare, AiFillPlusSquare, AiOutlineShoppingCart } from 'react-icons/ai';
+import { BsFillBagCheckFill } from 'react-icons/bs';
 
 export default function Navber() {
   // const ref = useRef()
@@ -45,12 +46,23 @@ const toggleCart = () => {
            <ol className='list-decimal'>
             <li>
               <div className="item flex my-5">
-              <div className='w-3/4 '> T-Shirt Lorem ipsum </div>
+              <div className='w-3/5 '> T-Shirt Lorem ipsum </div>
+          
+                <div className=' flex items-center justify-center'><AiFillPlusSquare className='cursor-pointer mx-2 text-2xl  text-green-400'/><span className='text-2xl mb-1'>3</span>  <AiFillMinusSquare className='cursor-pointer mx-2 text-2xl text-red-400'/></div>
+              </div>
+            </li>
+            <li>
+              <div className="item flex my-5">
+              <div className='w-3/5 '> T-Shirt Lorem ipsum </div>
           
                 <div className=' flex items-center justify-center'><AiFillPlusSquare className='cursor-pointer mx-2 text-2xl  text-green-400'/><span className='text-2xl mb-1'>3</span>  <AiFillMinusSquare className='cursor-pointer mx-2 text-2xl text-red-400'/></div>
               </div>
             </li>
           </ol>
+          <div className="flex">
+          <button className="flex text-white bg-green-500 border-0 py-3 px-3 focus:outline-none hover:bg-green-600 rounded text-sm"><BsFillBagCheckFill className='mx-1 mt-'/> CheckOut</button>
+          <button className="mx-2  text-white bg-green-500 border-0 py-2 px-3 focus:outline-none hover:bg-green-600 rounded text-sm">Clear Cart</button>
+          </div>
       </div>
 
     </div>
