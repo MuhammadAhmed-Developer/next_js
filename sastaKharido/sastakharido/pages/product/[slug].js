@@ -6,10 +6,21 @@ export default function Post() {
   // const {slug} = router.query
   
   const [pin, setpin] = useState()
- const checkServiceAbility = () =>{
-    let pins = fetch('http://localhost:3000/api/pincode')
+  const [service, setservice] = useState()
+
+ const checkServiceAbility = async () =>{
+    let pins = await  fetch('http://localhost:3000/api/pincode')
+    let pinJson = await pins.json()
+    if(pinJson.includes(pin)){
+      setservice(true)
+    }else{
+      setservice(false)
+    }
  }
 
+ const onChangePin = (e) =>{
+  setpin(e.target.value)
+ }
 
   return <>
             <section className="text-gray-600 body-font overflow-hidden">
@@ -91,7 +102,7 @@ export default function Post() {
           </button>
         </div>
         <div className="pin mt-6 flex space-x-2 text-sm">
-          <input type="text" className='px-2 border-2 border-green-200 rounded-md' />
+          <input onChange={onChangePin} type="text" className='px-2 border-2 border-green-200 rounded-md' />
           <button onClick={checkServiceAbility} className='flex ml-12 text-white bg-green-500 border-0 py-1 px-4 focus:outline-none hover:bg-green-600 rounded text-sm'>Check</button>
         </div>
       </div>
