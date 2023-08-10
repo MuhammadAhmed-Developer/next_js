@@ -10,21 +10,28 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     try {
-      
+      if(localStorage.getItem("cart")){
+        setcart(JSON.parse(localStorage.getItem("cart")))
+      }      
     } catch (error) {
-      
+      console.error(error)  
+      localStorage.clear()
     }
-   if(localStorage.getItem("cart")){
-     setcart(JSON.parse(localStorage.getItem("cart")))
-   }else{
-
-   }
+   
   }, [])
   
 
 
   const saveCart = (myCart) =>{
     localStorage.setItem('Cart', myCart )
+    let subt = 0
+    let keys = Object.keys(myCart)
+    for (let i = 0; i< keys.length; i++) {
+     console.log(keys);
+      subt += myCart[keys[i]].price * myCart[keys[i]].qty
+      
+    }
+    setsubTotal(subt)
   }
 
   const addToCart = (itemCode, qty, price, name, size, variant) => {
@@ -35,15 +42,17 @@ function MyApp({ Component, pageProps }) {
       newCart[itemCode] = {qty: 1, price, name, size, variant} //new item add
      }
      setcart(newCart)
+     console.log(newCart);
      saveCart(newCart)
   }
 
 
   const removeToCart = (itemCode, qty, price, name, size, variant) => {
-     let newCart = cart
+     let newCart =JSON.parse(JSON.stringify(cart))
      if(itemCode in cart){
        newCart[itemCode].qty = cart[itemCode] - qty  //already add quantity increased
      }
+     console.log(itemCode);
      if(newCart[itemCode]["qty"]<=0){
        delete newCart[itemCode]
      }
@@ -58,8 +67,8 @@ function MyApp({ Component, pageProps }) {
   }
 
   return <>
-  <Navber/>
-  <Component {...pageProps} />
+  <Navber cart={cart} addToCart={addToCart} removeToCart={removeToCart} clearCart={clearCart} subTotal={subTotal}/>
+  <Component cart={cart} addToCart={addToCart} removeToCart={removeToCart} clearCart={clearCart} subTotal={subTotal} {...pageProps} />
   <Footer/>
   </>
 }
