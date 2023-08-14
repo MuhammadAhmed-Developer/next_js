@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { AiFillCloseCircle, AiFillMinusSquare, AiFillPlusSquare, AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiFillCloseCircle, AiFillMinusSquare, AiFillPlusSquare, AiOutlineShoppingCart,  } from 'react-icons/ai';
+import { RiAccountCircleFill } from 'react-icons/ri';
 import { BsFillBagCheckFill } from 'react-icons/bs';
 
 export default function Navber({cart, addToCart, removeToCart, clearCart, subTotal}) {
@@ -35,8 +36,10 @@ export default function Navber({cart, addToCart, removeToCart, clearCart, subTot
           <Link href={'/mugs'}><li>Mugs</li></Link>
         </ul>
       </div>
-      <div className="cart absolute right-5 " onClick={toggleCart} >
-        <AiOutlineShoppingCart className='text-xl md:text-3xl cursor-pointer text-green-500' />
+      <div className="cart absolute right-4 flex align-middle" >
+        <Link href={'/login'}>
+      <RiAccountCircleFill className='text-xl md:text-3xl cursor-pointer text-green-500 mr-5' /></Link>
+        <AiOutlineShoppingCart  onClick={toggleCart} className='text-xl md:text-3xl cursor-pointer text-green-500' />
       </div>
 
       {/* Toggle Cart============================= */}

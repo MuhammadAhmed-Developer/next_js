@@ -24,11 +24,13 @@ export default function Order() {
             <span className="ml-auto text-gray-900">1</span>
             <span className="ml-auto text-gray-900">$ 99</span>
           </div>
-          <div className="flex border-t border-b mb-6 border-gray-200 py-2">
-            <span className="text-gray-500">Quantity</span>
-            <span className="ml-auto text-gray-900">2</span>
+          <div className="flex border-t  border-gray-200 py-2">
+            <span className="text-gray-500">T-Shirt M</span>
+            <span className="ml-auto text-gray-900">1</span>
+            <span className="ml-auto text-gray-900">$ 99</span>
           </div>
-          <div className="flex">
+         
+          <div className="flex mt-2">
             <span className="title-font font-medium text-2xl text-gray-900">SubTotal: $58.00</span>
             <button className="flex ml-auto text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded">Track Order</button>
            
