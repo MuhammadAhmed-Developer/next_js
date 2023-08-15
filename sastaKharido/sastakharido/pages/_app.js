@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
   const addToCart = (itemCode, qty, price, name, size, variant) => {
      let newCart = cart
      if(itemCode in cart){
-       newCart[itemCode].qty = cart[itemCode].qty + qty  //already add quantity increased
+       newCart[itemCode].qty = cart[itemCode].qty + 1  //already add quantity increased
      }else{
       newCart[itemCode] = {qty: 1, price, name, size, variant} //new item add
      }
