@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   let myfile;
  let allblogs =[]
 
-    for (let index = 0; index < data.length; index++) {
+    for (let index = 0; index < 5; index++) {
       const item = data[index];
       // console.log(item)
       myfile =  await fs.promises.readFile(('blogsData/' +  item), "utf-8" )
