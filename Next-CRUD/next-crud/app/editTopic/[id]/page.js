@@ -1,29 +1,25 @@
-import EditTopicForm from "@/app/(components)/EditTopicForm";
+import EditTopicForm from "../../(components)/EditTopicForm";
 
-
-const getTopicById = async (id) =>{
+const getTopicById = async (id) => {
   try {
-    
-    const res = fetch(`http://localhost:3000/api/topics/${id}`, {cache:"no-store"})
+    const res = await fetch(`http://localhost:3000/api/topics/${id}`, {
+      cache: "no-store",
+    });
 
-
-    if(!res.ok){
-      throw new error("Failed to fetch ")
+    if (!res.ok) {
+      throw new Error("Failed to fetch topic");
     }
-    return res.json()
+
+    return res.json();
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
- }
+};
 
-export default async function EditTopic({params}) {
-  const {id} = params; 
-  // console.log(id);
-  const {topic} = await getTopicById(id)
-  console.log(topic);
-  const {title, description} = topic
+export default async function EditTopic({ params }) {
+  const { id } = params;
+  const { topic } = await getTopicById(id);
+  const { title, description } = topic;
 
-    return <EditTopicForm id={id} title={title} description={description}/>
-    
-  }
-  
+  return <EditTopicForm id={id} title={title} description={description} />;
+}
