@@ -9,6 +9,7 @@ const getTopics = async () => {
     if (!res.ok) {
       throw new Error("Failed To Fetch topics")
     }
+    
     return res.json()
   }
   catch (error) {
@@ -16,7 +17,7 @@ const getTopics = async () => {
   }
 }
 
-export default async function TopicLists() {
+export default async function TopicLists(props) {
 
   const { topics } = await getTopics()
 
@@ -29,7 +30,7 @@ export default async function TopicLists() {
             <h2>{t.description}</h2>
           </div>
           <div className="flex gap-3 py-3">
-            <RemoveBtn />
+            <RemoveBtn  id={t._id } />
             <Link href={`/editTopic/${t._id}`}>
               <FaEdit size={24} className="text-blue-500" />
             </Link>
