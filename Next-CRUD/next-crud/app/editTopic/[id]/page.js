@@ -16,7 +16,7 @@ const getTopicById = async (id) => {
   }
 };
 
-export default async function EditTopic({ params }) {
+export default  EditTopic = async ({ params }) => {
   const { id } = params;
   const { topic } = await getTopicById(id);
   const { title, description } = topic;

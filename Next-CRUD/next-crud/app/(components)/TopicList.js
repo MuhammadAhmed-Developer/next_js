@@ -24,7 +24,7 @@ export default async function TopicLists(props) {
   return (
     <>
       {topics.map((t) => (
-        <div className="px-5 py-3 flex justify-between border border-slate-500 my-3 gap-5 items-start align-middle">
+          <div className="px-5 py-3 flex justify-between border border-slate-500 my-3 gap-5 items-start align-middle">
           <div>
             <h1 className="font-bold text-2xl">{t.title}</h1>
             <h2>{t.description}</h2>
